@@ -24,6 +24,6 @@ olympics.each do |olympics|
     豆知識: #{olympics[:note]} "
   end
 end
-
+#git lai lan 2
 
 # 豆知識がある場合のみ豆知識について出力してください
