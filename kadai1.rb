@@ -2,11 +2,10 @@
 year = gets.to_i #gets(標準入力)
 
 # 以下の条件分岐に、新しい条件を追加してください
-if 
+if year < 1896
   puts "#年にオリンピックはまだありません"
-elsif 
   
-elsif 
+elsif year >= 1896 && year % 4 == 0 &&  year != 1916 && year != 1940 && year != 1944
   puts "#年は夏季オリンピックが開催されました"
 else
   puts "#年は夏季オリンピックイヤーではありません"
