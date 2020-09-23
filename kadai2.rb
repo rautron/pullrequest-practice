@@ -8,13 +8,20 @@ olympics = [
   {year: 1920, city: "アントワープ"},
   {year: 1924, city: "パリ", note: "同じ都市での2回目の開催は初"},
   {year: 1928, city: "アムステルダム"},
-  {year: 1932, city: "ロサンゼルス"}
+  {year: 1932, city: "ロサンゼルス"},
+  {year: 2020, city: "東京", note: "コロナウイルスで2021年に延期"}
 ]
 
 puts "第1~10回大会のオリンピック一覧"
 
 # each文を用いて、オリンピックの情報を出力してください
+olympics.each do |olympic|
+  puts "------------------------------"
+  puts "#{olympic[:year]}年#{olympic[:city]}会"
 
-
+  if olympic.key? :note
+    puts "豆知識：#{olympic[:note]}"
+  end
+end
 
 # 豆知識がある場合のみ豆知識について出力してください
