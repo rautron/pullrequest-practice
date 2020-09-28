@@ -11,17 +11,14 @@ olympics = [
   {year: 1932, city: "ロサンゼルス"},
   {year: 2020, city: "東京", note: "コロナウイルスで2021年に延期"}
 ]
-
 puts "第1~10回大会のオリンピック一覧"
-
-# each文を用いて、オリンピックの情報を出力してください
-
+#use each command to output Olympic information
 olympics.each do |olympic|
-  puts "--------------------"
+  puts "---------------------------"
   puts "#{olympic[:year]}年#{olympic[:city]}大会"
-  if olympic[:note] != nil 
-    puts "豆知識:#{olympic[:note]}" 
+  if olympic[:note] != nil
+    puts "豆知識：#{olympic[:note]}"
   end
-
 end
-# 豆知識がある場合のみ豆知識について出力してください
+
+  
