@@ -2,6 +2,7 @@
 year = gets.to_i #gets(標準入力)
 
 # 以下の条件分岐に、新しい条件を追加してください
+
 if year < 1896
   puts "#{year}年にオリンピックはまだありません"
 elsif year == 1916 || year == 1940 || year == 1944 
