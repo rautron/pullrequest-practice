@@ -5,8 +5,7 @@ class Menu
   # get_total_priceメソッドを定義してください
   
   
-  
-  
+
     return "#{self.name} #{total_price}vnd"
   end
 end
