@@ -5,9 +5,9 @@ class Menu
   # get_total_priceメソッドを定義してください
   def get_total_price(count)
       if count >= 3
-        total_price = count * 30000 - 10000
+        total_price = count * self.price - 10000
       else
-        total_price = count * 30000
+        total_price = count * self.price
       end
   
     return "#{self.name} #{total_price}vnd"
