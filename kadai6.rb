@@ -10,6 +10,12 @@ class Menu
   def info
     return "#{self.name} #{self.price}vnd"
   end
+  
+  #Only get name
+  def get_specs
+    return "#{self.name}"
+  end
+  
 end
 
 class Drink < Menu
@@ -25,6 +31,12 @@ class Drink < Menu
   def info
     return "#{self.name} #{self.price}vnd (#{self.size}サイズ)"
   end
+  
+  #Get name and size
+  def get_specs
+    return "#{self.name} (#{self.size}サイズ)"
+  end
+  
 end
 
 menu1 = Menu.new(name: "Phở", price: 30000)
@@ -39,6 +51,14 @@ drink2 = Drink.new(name: "Tra", price: 10000, size: "M")
 # 変数menusを定義して配列を代入してください
 menus = [menu1, menu2, menu3, drink1, drink2]
 
+index = 0
 menus.each do |menu|
-  puts "#{menu.info}"
+  puts "#{index}. #{menu.info}"
+  index = index + 1
 end
+
+puts "メニューの番号を選んでください"
+selected_menu = gets.to_i
+
+puts "選択されたメニュー：#{menus[selected_menu].get_specs}"
+puts "お会計は：#{menus[selected_menu].price}vndです"
