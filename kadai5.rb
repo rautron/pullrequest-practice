@@ -41,3 +41,11 @@ menus = [menu1, menu2, menu3, drink1, drink2]
 menus.each do |menu|
   puts "#{menu.info}"
 end
+
+puts "-----------------------------"
+
+puts "メニューの番号を選択してください"
+order = gets.to_i
+selected_menu = menus[order]
+puts "選択されたメニューは: #{selected_menu.name}"
+puts "お合計は: #{selected_menu.price}vndです"
