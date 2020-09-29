@@ -13,8 +13,22 @@ olympics = [
 
 puts "第1~10回大会のオリンピック一覧"
 
+olympics.push(  {year: 2020, city: "東京", note: "コロナウイルスで2021年に延期"})
+
+p "each文を用いて、オリンピックの情報を出力してください"
 # each文を用いて、オリンピックの情報を出力してください
+olympics.each do |olym|
+  p "----------------------------------"
+  p "#{olym[:year]}年#{olym[:city]}大会"
+end
 
-
+p "豆知識がある場合のみ豆知識について出力してください "
 
 # 豆知識がある場合のみ豆知識について出力してください
+
+olympics.each do |olym|
+  p "----------------------------------"
+  p "#{olym[:year]}年#{olym[:city]}大会"
+  p "豆知識: #{olym[:note]}" unless olym[:note].nil?
+end
+
