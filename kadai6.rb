@@ -38,6 +38,10 @@ drink2 = Drink.new(name: "trà", price: "5000", size: "S")
 # 変数menusを定義して配列を代入してください
 menus = [menu1, menu2, menu3, drink1, drink2]
 
-menus.each do |menu|
-  puts "#{menu.info}"
+menus.each_with_index do |menu, index|
+  puts "#{index}. #{menu.info}"
 end
+puts "メニューの番号を選択してください。"
+print "選択されたメニュー: "
+selected_menu = gets.to_i
+puts "お会計は#{menus[selected_menu].price}です。"
