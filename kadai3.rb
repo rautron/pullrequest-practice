@@ -4,10 +4,10 @@ class Menu
   
   # get_total_priceメソッドを定義してください
   
-  
-  
-  
-    return "#{self.name} #{total_price}vnd"
+  def get_total_price(count)
+    total_price = self.price * count
+    total_price -= 10000 if count>=3
+    "#{self.name} #{total_price}vnd"
   end
 end
 
@@ -16,3 +16,5 @@ menu1.name = "Phở"
 menu1.price = 30000
 
 # menu1に対してget_total_priceメソッドを呼び出してください
+puts menu1.get_total_price(2)
+puts menu1.get_total_price(3)
