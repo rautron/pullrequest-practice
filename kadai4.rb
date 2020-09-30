@@ -13,9 +13,15 @@ class Menu
 end
 
 #メニューの変数を定義してください
-menu1 = 
-menu2 = 
-menu3 = 
+menu1 = Menu.new(name: "Phở",price: 30000)
+menu2 = Menu.new(name: "Bún chả",price: 40000)
+menu3 = Menu.new(name: "Bánh mỳ",price: 20000)
+
+menus = [menu1, menu2, menu3]
+
+menus.each do |m|
+  puts m.info
+end
 
 # 変数menusを定義して配列を代入してください
 
