@@ -2,6 +2,7 @@ class Menu
   attr_accessor :name
   attr_accessor :price
   
+
   def initialize name:, price:
     self.name = name
     self.price = price
@@ -17,6 +18,7 @@ class Drink < Menu
   
   # initializeメソッドをオーバーライドする
   # nameとpriceはsuperとする
+
   def initialize name:, price:, size:
     super name: name, price: price
     self.size = size
@@ -53,3 +55,4 @@ selected_menu = menus[order - 1]
 
 puts "選択されたメニュー: #{selected_menu.name}"
 puts "お会計は #{selected_menu.price}VND"
+

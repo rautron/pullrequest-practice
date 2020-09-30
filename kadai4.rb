@@ -13,6 +13,7 @@ class Menu
 end
 
 #メニューの変数を定義してください
+
 menu1 = Menu.new name: "Pho Bo", price: 40000
 menu2 = Menu.new name: "Pho Ga", price: 350000
 menu3 = Menu.new name: "Pho Hai San", price: 50000
@@ -24,3 +25,4 @@ menus = [menu1, menu2, menu3]
 menus.each do |menu|
   puts menu.info
 end
+
