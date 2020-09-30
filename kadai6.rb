@@ -41,6 +41,16 @@ menus = [menu1, menu2, menu3, drink1, drink2]
 # 変数menusを定義して配列を代入してください
 
 
-menus.each do |menu|
-  puts "#{menu.info}"
+menus.each_with_index do |menu, index|
+  puts "#{index}. #{menu.info}"
 end
+
+puts "------------------"
+puts "メニュー番号を選択してください"
+order = gets.to_i
+
+selected_menu = menus[order]
+
+return unless selected_menu
+puts "選択されたメニュ-: #{selected_menu.name}" 
+puts "お会計は #{selected_menu.price} VND です"
